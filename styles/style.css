@@ -124,13 +124,27 @@
 }
 
 /* Эффекты */
-.effect--sepia { filter: sepia(75%); }
-.effect--grayscale { filter: grayscale(0.6); }
-.effect--hue-rotate { filter: hue-rotate(-85deg); }
-.effect--invert { filter: invert(0.65); }
-.effect--saturate { filter: saturate(55%); }
-.effect--blur { filter: blur(0.12rem); }
-.effect--combo { filter: grayscale(0.6) sepia(75%); }
+.effect--sepia { 
+  filter: sepia(75%); 
+}
+.effect--grayscale { 
+  filter: grayscale(0.6); 
+}
+.effect--hue-rotate { 
+  filter: hue-rotate(-85deg); 
+}
+.effect--invert { 
+  filter: invert(0.65); 
+}
+.effect--saturate { 
+  filter: saturate(55%); 
+}
+.effect--blur { 
+  filter: blur(0.12rem); 
+}
+.effect--combo { 
+  filter: grayscale(0.6) sepia(75%); 
+}
 
 .tile__text {
   padding: 25px 25px 0;
