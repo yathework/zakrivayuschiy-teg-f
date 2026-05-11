@@ -1,1 +1,20 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --min-width: 375px;
+  --max-width: 700px;
+
+  --font-base: "Inter-Variable", sans-serif;
+  --font-accent: "PressStart2P-Regular", fantasy;
+  --weight-heading: 715;
+  --weight-body: 410;
+
+  --bg-color: #fff;
+  --light: #fff;
+  --dark: #000;
+
+  --heart-contour-color: var(--dark);
+  --heart-body-color: none;
+  --heart-sparks-color: #ff0000;
+
+  --label-stroke: var(--light);
+}
