@@ -13,13 +13,13 @@
 .view {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  padding-block-start: 100px;
+  padding-block-start: 98px;
   padding-block-end: 100px;
-  font-family: var(--font-base);
-  font-variation-settings: "wght" var(--weight-body);
+  font-family: var(--font-base, sans-serif);
+  font-variation-settings: "wght" var(--weight-body, 400);
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #fff);
   background-image:
     repeating-linear-gradient(90deg, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
     repeating-linear-gradient(0deg, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
@@ -27,7 +27,7 @@
 }
 
 .container {
-  inline-size: clamp(var(--min-width), 100%, var(--max-width));
+  inline-size: clamp(var(--min-width, 375px), 100%, var(--max-width, 700px));
 }
 
 .center {
@@ -40,24 +40,24 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
-  background-color: var(--light);
+  background-color: var(--light, #fff);
   padding-block-start: clamp(120px, 108px + 3.2vw, 130px);
   padding-block-end: clamp(120px, 108px + 3.2vw, 130px);
-  margin-block-end: 97px;
+  margin-block-end: 96px;
   text-transform: uppercase;
-  border: 2px solid var(--dark);
+  border: 2px solid var(--dark, #000);
 }
 
 .page-head__logo {
   text-align: center;
-  font-family: var(--font-accent);
+  font-family: var(--font-accent, fantasy);
   font-size: clamp(49px, 30px + 5vw, 65px);
 }
 
 .page-head__tagline {
   text-align: center;
-  font-family: var(--font-accent);
-  font-size: clamp(14px, 4px + 2.75vw, 23px);
+  font-family: var(--font-accent, fantasy);
+  font-size: clamp(14px, 1px + 2.75vw, 23px);
 }
 
 /* Карточки */
@@ -67,27 +67,27 @@
 }
 
 .tile {
-  background-color: var(--light);
-  border: 2px solid var(--dark);
+  background-color: var(--light, #fff);
+  border: 2px solid var(--dark, #000);
 }
 
 .tile__title {
   font-size: 18px;
   line-height: 1.22;
   padding: 5px 10px 3px;
-  font-variation-settings: "wght" var(--weight-heading);
+  font-variation-settings: "wght" var(--weight-heading, 700);
 }
 
 .tile__image-wrap {
   position: relative;
-  border-block-start: 2px solid var(--dark);
-  border-block-end: 2px solid var(--dark);
+  border-block-start: 2px solid var(--dark, #000);
+  border-block-end: 2px solid var(--dark, #000);
 }
 
 .tile__label {
   position: absolute;
   z-index: 1;
-  font-family: var(--font-accent);
+  font-family: var(--font-accent, fantasy);
   font-size: 0.875rem;
   text-transform: uppercase;
   inset-block-start: clamp(24px, 3.8vw, 28px);
@@ -95,23 +95,23 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
   text-shadow:
-    var(--light) 1px 1px 0,
-    var(--light) -1px 1px 0,
-    var(--light) 1px -1px 0,
-    var(--light) -1px -1px 0;
+    var(--light, #fff) 1px 1px 0,
+    var(--light, #fff) -1px 1px 0,
+    var(--light, #fff) 1px -1px 0,
+    var(--light, #fff) -1px -1px 0;
 }
 
-@supports (-webkit-text-stroke: 1px var(--label-stroke)) {
+@supports (-webkit-text-stroke: 1px var(--label-stroke, #fff)) {
   .tile__label {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--label-stroke);
+    -webkit-text-stroke: 1px var(--label-stroke, #fff);
   }
 }
 
-@supports (text-stroke: 1px var(--label-stroke)) {
+@supports (text-stroke: 1px var(--label-stroke, #fff)) {
   .tile__label {
     text-shadow: none;
-    text-stroke: 1px var(--label-stroke);
+    text-stroke: 1px var(--label-stroke, #fff);
   }
 }
 
@@ -170,13 +170,13 @@
 
 /* Кнопки */
 .button {
-  border: 2px solid var(--dark);
+  border: 2px solid var(--dark, #000);
   border-radius: 0;
   outline: none;
   cursor: pointer;
-  background-color: var(--light);
-  color: var(--light);
-  font-family: var(--font-accent);
+  background-color: var(--light, #fff);
+  color: var(--light, #fff);
+  font-family: var(--font-accent, fantasy);
   transition: box-shadow 0.3s ease;
   position: relative;
 }
@@ -195,14 +195,14 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--dark);
+  box-shadow: 2px 2px 0 0 var(--dark, #000);
 }
 
 .button::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--dark);
+  background-color: var(--dark, #000);
   transform-origin: left;
   transform: scaleX(0);
   transition: transform 0.5s ease-in-out;
@@ -235,7 +235,7 @@
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid var(--dark);
+  border: 2px solid var(--dark, #000);
 }
 
 .card__like-button {
@@ -264,15 +264,15 @@
 .save-btn__icon {
   inline-size: 21px;
   block-size: 21px;
-  fill: var(--light);
+  fill: var(--light, #fff);
 }
 
 /* Модальное окно */
 .popup {
   max-inline-size: 357px;
   padding: 30px;
-  border: 2px solid var(--dark);
-  font-family: var(--font-accent);
+  border: 2px solid var(--dark, #000);
+  font-family: var(--font-accent, fantasy);
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -284,7 +284,7 @@
 }
 
 .popup::backdrop {
-  background-color: var(--dark);
+  background-color: var(--dark, #000);
   opacity: 0.75;
 }
 
@@ -299,7 +299,7 @@
 .popup__icon {
   inline-size: 39px;
   block-size: 39px;
-  fill: var(--dark);
+  fill: var(--dark, #000);
 }
 
 .popup__text {
@@ -316,6 +316,7 @@
 /* Адаптив */
 @media (width <= 375px) {
   .page-head {
+    margin-block-start: 2px;
     margin-block-end: 100px;
   }
 
@@ -332,5 +333,8 @@
     padding: 30px 40px;
     max-inline-size: 340px;
     inline-size: 100%;
+  }
+  .tile__label {
+    inset-inline-end: 25px;
   }
 }
